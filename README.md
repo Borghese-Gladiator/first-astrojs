@@ -1,3 +1,42 @@
+# First Astro.js
+Previously I worked with Gatsby, but Astro is the most famous now since it can ship with minimal JavaScript which can speed up time to render significantly.
+
+## Steps
+```
+npm create astro@latest
+npm run dev
+# wrote up an ecommerce site
+```
+- [X] bootstrap project
+- [X] product lists page
+- [X] product details page
+- [ ] deploy to Vercel
+
+### Troubleshooting
+- Error: `Cannot find module 'astro:content'`
+  - Problem: Empty content folder
+  - Solution:
+    - Create files ([reference](https://docs.astro.build/en/guides/content-collections/#getcollection))
+      - `src/content/config.ts` - defines Product Collection
+      - `src/content/product/product-01.md`
+      - `src/content/product/product-02.md`
+      - `src/content/product/product-03.md`
+      - `src/content/product/product-mdx.mdx`
+    - Reset TS language server - [reference](https://stackoverflow.com/questions/64454845/where-is-vscodes-restart-ts-server)
+    - `npx astro sync`
+- Error: `The left-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type`
+  - [https://stackoverflow.com/questions/36560806/the-left-hand-side-of-an-arithmetic-operation-must-be-of-type-any-number-or](https://stackoverflow.com/questions/36560806/the-left-hand-side-of-an-arithmetic-operation-must-be-of-type-any-number-or)
+
+### Info
+- Astro enables you to use whatever state management library you want (React, Vue, Svelte). Basically an Astro page loads your components.
+- 
+Astro processes, optimizes, and bundles your src/ files to create the final website that is shipped to the browser. Unlike the static public/ directory, your src/ files are built and handled for you by Astro.
+
+Some files (like Astro components) are not even sent to the browser as written but are instead rendered to static HTML. Other files (like CSS) are sent to the browser but may be optimized or bundled with other CSS files for performance.
+### Reference
+- [Astro Code Examples](https://github.com/withastro/astro/tree/main/examples)
+
+---
 # Astro Starter Kit: Basics
 
 ```sh
