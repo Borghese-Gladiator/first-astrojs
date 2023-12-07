@@ -3,9 +3,12 @@ import { getCollection } from 'astro:content';
 
 import Layout from '@/layouts/Layout.astro';
 
-const products = (await getCollection('product')).sort(
+// TODO(12/07): figure out typing of getCollection
+const products: any = await getCollection('product');
+products.sort(
 	(a: AstroProduct, b: AstroProduct) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
+
 ---
 <Layout title="Products - First Astro Project">
   <main>
