@@ -10,7 +10,7 @@ npm run dev
 - [X] bootstrap project
 - [X] product lists page
 - [X] product details page
-- [ ] deploy to Vercel
+- [X] deploy to Vercel
 
 ### Troubleshooting
 - Error: `Cannot find module 'astro:content'`
