@@ -1,6 +1,6 @@
 ---
-import { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths } from 'astro';
-import { type CollectionEntry, getCollection } from "astro:content";
+import type { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths } from 'astro';
+import { getCollection } from "astro:content";
 
 import ProductLayout from "@/layouts/ProductLayout.astro";
 
@@ -18,9 +18,7 @@ type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { slug } = Astro.params as Params;
-const { data } = Astro.props;
-const { name, description, pubDate, heroImage, } = data;
-// const { Content } = await post.render();
+const { data: { name, description, pubDate, heroImage }} = Astro.props as Props;
 
 ---
 
