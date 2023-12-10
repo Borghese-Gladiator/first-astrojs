@@ -1,15 +1,16 @@
 # First Astro.js
 Previously I worked with Gatsby, but Astro is the most famous now since it can ship with minimal JavaScript which can speed up time to render significantly.
 
-## Steps
-```
-npm create astro@latest
-npm run dev
-# wrote up an ecommerce site
-```
+## Implementation Steps
 - [X] bootstrap project
-- [X] product lists page
-- [X] product details page
+  - ```bash
+  npm create astro@latest
+  npm run dev
+  ```
+- Implement
+  - [X] product lists page
+  - [X] product details page
+  - [X] tsconfig.json paths
 - [X] deploy to Vercel
 
 ### Troubleshooting
